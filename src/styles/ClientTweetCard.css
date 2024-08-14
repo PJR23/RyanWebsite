@@ -1,0 +1,33 @@
+.tweet-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    max-width: 500px;
+    background-color: #f5f8fa;
+  }
+  
+  .skeleton {
+    background-color: #e1e8ed;
+    border-radius: 50%;
+  }
+  
+  .skeleton-avatar {
+    height: 48px;
+    width: 48px;
+  }
+  
+  .skeleton-line {
+    height: 16px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 4px;
+  }
+  
+  .tweet-not-found {
+    text-align: center;
+    color: #657786;
+  }
+  

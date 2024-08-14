@@ -1,0 +1,144 @@
+.AboutMe {
+  padding: 50px 10%;
+  position: relative;
+}
+
+.AboutMe::before {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: #283044;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 0;
+}
+
+.about-me-header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-me-header h2 {
+  font-size: 2.5em;
+  color: #283044;
+  text-decoration: underline;
+  text-decoration-color: #61dafb;
+  text-decoration-thickness: 3px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-me-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.about-me-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px solid #283044;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ebf5ee 0%, #c2d3d9 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.about-me-section:hover {
+  background: linear-gradient(135deg, #c2d3d9 0%, #ebf5ee 100%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-me-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-me-image {
+  flex: 1;
+  max-width: 40%;
+  margin: 0 20px;
+}
+
+.about-me-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-image {
+  order: 1;
+}
+
+.right-image {
+  order: 2;
+}
+
+.about-me-text {
+  flex: 2;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #283044;
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+}
+
+.about-me-section strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #283044;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .AboutMe {
+    padding: 50px 5%;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+  }
+
+  .about-me-content.reverse {
+    flex-direction: column;
+  }
+
+  .about-me-image {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .about-me-text {
+    font-size: 1rem;
+  }
+
+  .about-me-header h2 {
+    font-size: 2rem;
+  }
+}
