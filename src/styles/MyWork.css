@@ -108,17 +108,17 @@
   margin: 0 auto;
 }
 
-/* Inner container for the carousel */
+/* Inneres Container für das Karussell */
 .work-carousel-inner {
   display: flex;
-  transition: transform 0.9s ease;
+  transition: transform 0.3s ease;
   width: 100%;
 }
 
-/* Carousel item styles */
+/* Einzelne Karussell-Elemente */
 .work-item {
-  flex: 0 0 25%;
-  margin: 0 5px;
+  flex: 0 0 25%; /* Jedes Item nimmt 25% der Breite ein */
+  margin: 0 10px; /* Abstand zwischen den Items */
   background-color: #ebf5ee;
   border: 2px solid #283044;
   border-radius: 8px;
@@ -181,6 +181,27 @@
 .carousel-button:disabled {
   background-color: rgba(0, 0, 0, 0.2);
   cursor: default;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .show-all-button {
+    display: none; /* Button ausblenden */
+  }
+
+  .work-carousel {
+    display: none; /* Karussell ausblenden */
+  }
+
+  .work-item {
+    flex: 0 0 50%; /* Zwei Items nebeneinander auf kleineren Bildschirmen */
+  }
+}
+
+@media (max-width: 480px) {
+  .work-item {
+    flex: 0 0 80%; /* Ein Item pro Reihe auf sehr kleinen Bildschirmen */
+  }
 }
 
 /* Show All view styles */
